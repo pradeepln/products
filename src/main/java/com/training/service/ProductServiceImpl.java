@@ -4,12 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.training.dal.ProductDAO;
 import com.training.dal.ProductDAOInMemImpl;
 import com.training.domain.Product;
 
 @Service
+@Transactional
 public class ProductServiceImpl implements ProductService {
 	
 	ProductDAO dao; // = new ProductDAOInMemImpl();
@@ -19,6 +21,8 @@ public class ProductServiceImpl implements ProductService {
 		this.dao = dao;
 	}
 	
+	
+
 	
 	@Override
 	public int addProduct(Product toBeAdded) {
