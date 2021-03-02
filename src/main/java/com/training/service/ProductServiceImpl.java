@@ -2,14 +2,19 @@ package com.training.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.training.dal.ProductDAO;
 import com.training.dal.ProductDAOInMemImpl;
 import com.training.domain.Product;
 
+@Service
 public class ProductServiceImpl implements ProductService {
 	
 	ProductDAO dao; // = new ProductDAOInMemImpl();
 	
+	@Autowired
 	public void setDao(ProductDAO dao) {
 		this.dao = dao;
 	}

@@ -2,14 +2,19 @@ package com.training.ui;
 
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.training.domain.Product;
 import com.training.service.ProductService;
 import com.training.service.ProductServiceImpl;
 
+@Component
 public class ProductConsoleUI {
 	
 	ProductService service; // = new ProductServiceImpl();
 	
+	@Autowired
 	public void setService(ProductService service) {
 		this.service = service;
 	}
