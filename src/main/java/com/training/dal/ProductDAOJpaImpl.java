@@ -33,7 +33,7 @@ public class ProductDAOJpaImpl implements ProductDAO {
 
 	@Override
 	public List<Product> findAll() {
-		Query q = em.createQuery("select p from Product as p");
+		Query q = em.createQuery("select p from Product AS p");
 		return q.getResultList();
 	}
 
