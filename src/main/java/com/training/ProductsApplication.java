@@ -10,12 +10,13 @@ import com.training.ui.ProductConsoleUI;
 public class ProductsApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext springContainer = SpringApplication.run(ProductsApplication.class, args);
+//		ApplicationContext springContainer = 
+				SpringApplication.run(ProductsApplication.class, args);
 		
 //		ProductConsoleUI ui = new ProductConsoleUI(); // DO NOT DO THIS, don't create your own instances. use the ones created by spring
 		
-		ProductConsoleUI ui = springContainer.getBean(ProductConsoleUI.class);
-		ui.createProductWithUI();
+//		ProductConsoleUI ui = springContainer.getBean(ProductConsoleUI.class);
+//		ui.createProductWithUI();
 	}
 
 }
