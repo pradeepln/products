@@ -18,6 +18,8 @@ import com.training.service.ProductService;
 
 @RestController
 public class ProductController {
+	
+	int instanceId = (int) (Math.random() * 100);
 
 	@Autowired
 	ProductService service;
@@ -29,6 +31,9 @@ public class ProductController {
 	
 	@GetMapping("/products/{id}")
 	public ResponseEntity<Product> getProductById(@PathVariable("id")int pid){
+		
+		System.out.println("<<<<<<<<<<<<<<<<<<< ProductService instance id: "+instanceId+" >>>>>>>>>>>>>>>>>>>>>");
+		
 		Product p = service.findById(pid);
 		if(p != null) {
 			return new ResponseEntity<Product>(p, HttpStatus.OK);
